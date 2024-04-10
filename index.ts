@@ -38,6 +38,7 @@ const label_column: string[] = ["query"].concat(shapes.map((shape) => shape.name
 
 for (const [approach, option] of config) {
     const table: string[][] = [label_column];
+    console.log('-----');
     console.log(`Approach ${approach} started`);
     const current_result_folder = join(result_directory, approach);
     if (! await (fs.exists(current_result_folder))) {
@@ -57,7 +58,6 @@ for (const [approach, option] of config) {
     }
     const markdown_table = markdownTable(table);
     await Bun.write(join(current_result_folder, 'table.md'), markdown_table);
-    console.log(markdown_table);
     console.log('-----');
 }
 
