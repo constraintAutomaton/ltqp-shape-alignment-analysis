@@ -15,9 +15,9 @@ import { translate } from "sparqlalgebrajs";
 
 import * as SHEX_CONTEXT from './shex_context.json';
 
-export async function prepareQueries(queries_directory: string, _result_directory: string): Promise<[string, Query][]> {
+export async function prepareQueries(queries_directory: string): Promise<[string, Query][]> {
     const query_map: [string, Query][] = [];
-    const files =  (await fs.readdir(queries_directory)).sort();
+    const files = (await fs.readdir(queries_directory)).sort();
     for (const file of files) {
         const file_without_extension = file.substring(0, Math.max(file.indexOf('.'), 0));
         const text = await (Bun.file(join(queries_directory, file)).text());
@@ -54,7 +54,7 @@ export async function prepareShapes(shape_directory: string): Promise<IShape[]> 
 }
 
 export function getQueryTable(res: IResult): Map<string, string> {
-    const alignment: Map<string, string> = new Map();
+    const alignment = new Map<string, string>();
     for (const table_entry of res.alignedTable.values()) {
         for (const [shape_name, shape_result] of table_entry) {
             const alignment_result = alignment.get(shape_name);
@@ -108,17 +108,6 @@ export function parseShexShape(stringShapeJsonLD: string): Promise<RDF.Quad[]> {
 
 }
 
-export function replacer(key: any, value: any) {
-    if (value instanceof Map) {
-        return {
-            dataType: 'Map',
-            value: Array.from(value.entries()), // or with spread: value: [...value]
-        };
-    } else {
-        return value;
-    }
-}
-
 export function toObject(result: IResult): any {
     const res: any = {
         ...result
@@ -135,13 +124,10 @@ export function toObject(result: IResult): any {
 }
 
 function toObjectInner(map: Map<any, any>): Map<any, any> {
-    return Object.fromEntries
-        (Array.from
-            (map.entries()
-                , ([k, v]) =>
-                    v instanceof Map
-                        ? [k, toObjectInner(v)]
-                        : [k, v]
-            )
-        )
+    return Object.fromEntries(Array.from(map.entries(), ([k, v]) =>
+        v instanceof Map
+            ? [k, toObjectInner(v)]
+            : [k, v]
+    )
+    )
 }

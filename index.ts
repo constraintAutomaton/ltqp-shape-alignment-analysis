@@ -1,7 +1,7 @@
 
 import { reportAlignment, IOptions } from "query-shape-detection";
 import { markdownTable } from 'markdown-table'
-import { prepareQueries, prepareShapes, getQueryTable, replacer, toObject } from './helper';
+import { prepareQueries, prepareShapes, getQueryTable, toObject } from './helper';
 import { join } from 'node:path';
 import * as fs from "node:fs/promises";
 
@@ -9,7 +9,7 @@ const queries_directory = "./queries";
 const result_directory = "./results";
 const shape_directory = "./shapes";
 
-const query_map = await prepareQueries(queries_directory, result_directory);
+const query_map = await prepareQueries(queries_directory);
 const shapes = await prepareShapes(shape_directory);
 
 const config: [string, IOptions][] = [
@@ -43,8 +43,7 @@ for (const [approach, option] of config) {
     if (! await (fs.exists(current_result_folder))) {
         await fs.mkdir(current_result_folder);
     }
-    let i = 0;
-
+    
     for (const [query_name, query] of query_map) {
         console.log(`Query ${query_name} report created`);
         const res = reportAlignment({ query, shapes, option });
@@ -55,9 +54,6 @@ for (const [approach, option] of config) {
             column.push(query_table.get(shape.name)!);
         }
         table.push(column);
-        i += 1;
-        //if (i == 3) break;
-        
     }
     const markdown_table = markdownTable(table);
     await Bun.write(join(current_result_folder, 'table.md'), markdown_table);
