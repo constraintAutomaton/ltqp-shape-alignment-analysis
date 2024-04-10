@@ -3,19 +3,26 @@
   "module": "index.ts",
   "type": "module",
   "devDependencies": {
-    "bun-types": "latest"
+    "bun-types": "latest",
+    "eslint-plugin-unused-imports": "^3.1.0"
   },
   "peerDependencies": {
-    "typescript": "^5.0.0"
+    "typescript": "^5.0.0",
+    "tslint": "^6.1.3"
   },
   "dependencies": {
     "@rdfjs/types": "^1.1.0",
     "@shexjs/parser": "1.0.0-alpha.26",
     "@shexjs/visitor": "1.0.0-alpha.25",
     "@types/shexj": "^2.1.4",
+    "global": "^4.4.0",
     "jsonld-streaming-parser": "^3.4.0",
     "markdown-table": "^3.0.3",
     "query-shape-detection": "^0.0.8",
     "sparqlalgebrajs": "^4.3.4"
+  },
+  "scripts": {
+    "lint": "tslint -c tslint.json './*.ts'",
+    "clean": "rm -r ./results/*"
   }
 }

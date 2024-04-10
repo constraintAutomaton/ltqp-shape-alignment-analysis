@@ -1,0 +1,26 @@
+{
+  "allSubjectGroupsHaveStrongAlignment": false,
+  "alignedTable": {
+    "message": {
+      "http://exemple.ca/posts.shexc": 2,
+      "http://exemple.ca/profile.shexc": 2,
+      "http://exemple.ca/comments.shexc": 0
+    },
+    "originalPostInner": {
+      "http://exemple.ca/posts.shexc": 1,
+      "http://exemple.ca/profile.shexc": 2,
+      "http://exemple.ca/comments.shexc": 2
+    },
+    "forum": {
+      "http://exemple.ca/posts.shexc": 0,
+      "http://exemple.ca/profile.shexc": 0,
+      "http://exemple.ca/comments.shexc": 0
+    },
+    "moderator": {
+      "http://exemple.ca/posts.shexc": 2,
+      "http://exemple.ca/profile.shexc": 0,
+      "http://exemple.ca/comments.shexc": 2
+    }
+  },
+  "unAlignedShapes": {}
+}

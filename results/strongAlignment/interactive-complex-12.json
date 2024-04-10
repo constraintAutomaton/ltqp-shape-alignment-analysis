@@ -1,0 +1,41 @@
+{
+  "allSubjectGroupsHaveStrongAlignment": false,
+  "alignedTable": {
+    "rootPerson": {
+      "http://exemple.ca/posts.shexc": 2,
+      "http://exemple.ca/profile.shexc": 1,
+      "http://exemple.ca/comments.shexc": 2
+    },
+    "fr": {
+      "http://exemple.ca/posts.shexc": 0,
+      "http://exemple.ca/profile.shexc": 0,
+      "http://exemple.ca/comments.shexc": 0
+    },
+    "reply": {
+      "http://exemple.ca/posts.shexc": 0,
+      "http://exemple.ca/profile.shexc": 2,
+      "http://exemple.ca/comments.shexc": 0
+    },
+    "post": {
+      "http://exemple.ca/posts.shexc": 1,
+      "http://exemple.ca/profile.shexc": 2,
+      "http://exemple.ca/comments.shexc": 2
+    },
+    "tag": {
+      "http://exemple.ca/posts.shexc": 0,
+      "http://exemple.ca/profile.shexc": 0,
+      "http://exemple.ca/comments.shexc": 0
+    },
+    "tagSuperType": {
+      "http://exemple.ca/posts.shexc": 2,
+      "http://exemple.ca/profile.shexc": 2,
+      "http://exemple.ca/comments.shexc": 2
+    },
+    "tagType": {
+      "http://exemple.ca/posts.shexc": 2,
+      "http://exemple.ca/profile.shexc": 2,
+      "http://exemple.ca/comments.shexc": 2
+    }
+  },
+  "unAlignedShapes": {}
+}

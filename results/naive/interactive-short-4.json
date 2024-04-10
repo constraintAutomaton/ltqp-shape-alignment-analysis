@@ -1,0 +1,11 @@
+{
+  "allSubjectGroupsHaveStrongAlignment": false,
+  "alignedTable": {
+    "message": {
+      "http://exemple.ca/posts.shexc": 0,
+      "http://exemple.ca/profile.shexc": 0,
+      "http://exemple.ca/comments.shexc": 0
+    }
+  },
+  "unAlignedShapes": {}
+}

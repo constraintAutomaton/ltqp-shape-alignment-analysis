@@ -1,0 +1,31 @@
+{
+  "allSubjectGroupsHaveStrongAlignment": false,
+  "alignedTable": {
+    "person": {
+      "http://exemple.ca/posts.shexc": 2,
+      "http://exemple.ca/profile.shexc": 1,
+      "http://exemple.ca/comments.shexc": 2
+    },
+    "message": {
+      "http://exemple.ca/posts.shexc": 0,
+      "http://exemple.ca/profile.shexc": 0,
+      "http://exemple.ca/comments.shexc": 0
+    },
+    "originalPostInner": {
+      "http://exemple.ca/posts.shexc": 1,
+      "http://exemple.ca/profile.shexc": 2,
+      "http://exemple.ca/comments.shexc": 2
+    },
+    "originalPost": {
+      "http://exemple.ca/posts.shexc": 0,
+      "http://exemple.ca/profile.shexc": 0,
+      "http://exemple.ca/comments.shexc": 0
+    },
+    "creator": {
+      "http://exemple.ca/posts.shexc": 0,
+      "http://exemple.ca/profile.shexc": 0,
+      "http://exemple.ca/comments.shexc": 0
+    }
+  },
+  "unAlignedShapes": {}
+}
