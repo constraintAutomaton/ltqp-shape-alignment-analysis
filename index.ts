@@ -1,5 +1,5 @@
 
-import { solveShapeQueryContainment } from "query-shape-detection";
+import { ContainmentResult, solveShapeQueryContainment } from "query-shape-detection";
 import { markdownTable } from 'markdown-table'
 import { prepareQueries, prepareShapes, getQueryTable, toObject } from './helper';
 import { join } from 'node:path';
@@ -29,7 +29,12 @@ if (! await (fs.exists(current_result_folder))) {
 for (const [query_name, query] of query_map) {
     console.log(`Query ${query_name} report created`);
     const res = solveShapeQueryContainment({ query, shapes });
-    await Bun.write(join(current_result_folder, `${query_name}.json`), JSON.stringify(toObject(res), null, 2));
+    await Bun.write(join(current_result_folder, `${query_name}.json`), JSON.stringify(toObject(res), (key, value)=>{
+        if(key==="result"){
+            return ContainmentResult[value];
+        }
+        return value;
+    }, 2));
     const [query_table, allContained] = getQueryTable(res,shapes);
     const column: string[] = [query_name];
     for (const shape of shapes) {

@@ -2,7 +2,7 @@
   "conditionalLink": [],
   "starPatternsContainment": {
     "rootPerson": {
-      "result": 1,
+      "result": "ALIGNED",
       "target": [
         "http://exemple.ca/posts.shexc",
         "http://exemple.ca/profile.shexc",
@@ -13,7 +13,7 @@
       ]
     },
     "knows": {
-      "result": 1,
+      "result": "ALIGNED",
       "target": [
         "http://exemple.ca/posts.shexc",
         "http://exemple.ca/profile.shexc",
@@ -22,7 +22,7 @@
       "bindingByRdfClass": []
     },
     "person": {
-      "result": 0,
+      "result": "CONTAIN",
       "target": [
         "http://exemple.ca/profile.shexc"
       ]

@@ -2,26 +2,26 @@
   "conditionalLink": [],
   "starPatternsContainment": {
     "rootPerson": {
-      "result": 2,
+      "result": "DEPEND",
       "target": [
         "http://exemple.ca/profile.shexc"
       ]
     },
     "message": {
-      "result": 0,
+      "result": "CONTAIN",
       "target": [
         "http://exemple.ca/posts.shexc",
         "http://exemple.ca/comments.shexc"
       ]
     },
     "person": {
-      "result": 0,
+      "result": "CONTAIN",
       "target": [
         "http://exemple.ca/profile.shexc"
       ]
     },
     "like": {
-      "result": 2
+      "result": "DEPEND"
     }
   },
   "visitShapeBoundedResource": {

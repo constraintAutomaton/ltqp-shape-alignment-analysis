@@ -2,14 +2,14 @@
   "conditionalLink": [],
   "starPatternsContainment": {
     "message": {
-      "result": 0,
+      "result": "CONTAIN",
       "target": [
         "http://exemple.ca/posts.shexc",
         "http://exemple.ca/comments.shexc"
       ]
     },
     "tag": {
-      "result": 2
+      "result": "DEPEND"
     }
   },
   "visitShapeBoundedResource": {

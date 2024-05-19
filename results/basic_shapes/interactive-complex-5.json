@@ -7,19 +7,19 @@
   ],
   "starPatternsContainment": {
     "rootPerson": {
-      "result": 0,
+      "result": "CONTAIN",
       "target": [
         "http://exemple.ca/profile.shexc"
       ]
     },
     "fr": {
-      "result": 2,
+      "result": "DEPEND",
       "target": [
         "http://exemple.ca/profile.shexc"
       ]
     },
     "forum": {
-      "result": 1,
+      "result": "ALIGNED",
       "target": [
         "http://exemple.ca/posts.shexc",
         "http://exemple.ca/profile.shexc",
@@ -28,10 +28,10 @@
       "bindingByRdfClass": []
     },
     "mem": {
-      "result": 3
+      "result": "REJECTED"
     },
     "post": {
-      "result": 0,
+      "result": "CONTAIN",
       "target": [
         "http://exemple.ca/posts.shexc"
       ]

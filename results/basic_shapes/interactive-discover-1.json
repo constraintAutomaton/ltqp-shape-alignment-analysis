@@ -2,7 +2,7 @@
   "conditionalLink": [],
   "starPatternsContainment": {
     "message": {
-      "result": 0,
+      "result": "CONTAIN",
       "target": [
         "http://exemple.ca/posts.shexc"
       ]

@@ -2,19 +2,19 @@
   "conditionalLink": [],
   "starPatternsContainment": {
     "rootPerson": {
-      "result": 0,
+      "result": "CONTAIN",
       "target": [
         "http://exemple.ca/profile.shexc"
       ]
     },
     "fr": {
-      "result": 2,
+      "result": "DEPEND",
       "target": [
         "http://exemple.ca/profile.shexc"
       ]
     },
     "message": {
-      "result": 0,
+      "result": "CONTAIN",
       "target": [
         "http://exemple.ca/posts.shexc"
       ]

@@ -2,20 +2,20 @@
   "conditionalLink": [],
   "starPatternsContainment": {
     "person": {
-      "result": 0,
+      "result": "CONTAIN",
       "target": [
         "http://exemple.ca/profile.shexc"
       ]
     },
     "message": {
-      "result": 0,
+      "result": "CONTAIN",
       "target": [
         "http://exemple.ca/posts.shexc",
         "http://exemple.ca/comments.shexc"
       ]
     },
     "otherMessage": {
-      "result": 0,
+      "result": "CONTAIN",
       "target": [
         "http://exemple.ca/posts.shexc",
         "http://exemple.ca/comments.shexc"

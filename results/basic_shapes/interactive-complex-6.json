@@ -2,28 +2,28 @@
   "conditionalLink": [],
   "starPatternsContainment": {
     "rootPerson": {
-      "result": 0,
+      "result": "CONTAIN",
       "target": [
         "http://exemple.ca/profile.shexc"
       ]
     },
     "fr": {
-      "result": 2,
+      "result": "DEPEND",
       "target": [
         "http://exemple.ca/profile.shexc"
       ]
     },
     "post": {
-      "result": 0,
+      "result": "CONTAIN",
       "target": [
         "http://exemple.ca/posts.shexc"
       ]
     },
     "tag1": {
-      "result": 3
+      "result": "REJECTED"
     },
     "tag2": {
-      "result": 2
+      "result": "DEPEND"
     }
   },
   "visitShapeBoundedResource": {

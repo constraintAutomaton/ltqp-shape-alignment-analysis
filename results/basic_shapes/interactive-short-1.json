@@ -2,13 +2,13 @@
   "conditionalLink": [],
   "starPatternsContainment": {
     "person": {
-      "result": 0,
+      "result": "CONTAIN",
       "target": [
         "http://exemple.ca/profile.shexc"
       ]
     },
     "city": {
-      "result": 2
+      "result": "DEPEND"
     }
   },
   "visitShapeBoundedResource": {

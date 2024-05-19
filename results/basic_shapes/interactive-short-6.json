@@ -2,7 +2,7 @@
   "conditionalLink": [],
   "starPatternsContainment": {
     "message": {
-      "result": 0,
+      "result": "CONTAIN",
       "target": [
         "http://exemple.ca/posts.shexc",
         "http://exemple.ca/profile.shexc",
@@ -10,13 +10,13 @@
       ]
     },
     "originalPostInner": {
-      "result": 0,
+      "result": "CONTAIN",
       "target": [
         "http://exemple.ca/posts.shexc"
       ]
     },
     "forum": {
-      "result": 1,
+      "result": "ALIGNED",
       "target": [
         "http://exemple.ca/posts.shexc",
         "http://exemple.ca/profile.shexc",
@@ -25,7 +25,7 @@
       "bindingByRdfClass": []
     },
     "moderator": {
-      "result": 0,
+      "result": "CONTAIN",
       "target": [
         "http://exemple.ca/profile.shexc"
       ]

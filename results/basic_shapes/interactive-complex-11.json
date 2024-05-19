@@ -2,13 +2,13 @@
   "conditionalLink": [],
   "starPatternsContainment": {
     "rootPerson": {
-      "result": 0,
+      "result": "CONTAIN",
       "target": [
         "http://exemple.ca/profile.shexc"
       ]
     },
     "fr": {
-      "result": 1,
+      "result": "ALIGNED",
       "target": [
         "http://exemple.ca/posts.shexc",
         "http://exemple.ca/profile.shexc",
@@ -17,10 +17,10 @@
       "bindingByRdfClass": []
     },
     "work": {
-      "result": 3
+      "result": "REJECTED"
     },
     "org": {
-      "result": 1,
+      "result": "ALIGNED",
       "target": [
         "http://exemple.ca/posts.shexc",
         "http://exemple.ca/profile.shexc",
@@ -29,7 +29,7 @@
       "bindingByRdfClass": []
     },
     "country": {
-      "result": 3
+      "result": "REJECTED"
     }
   },
   "visitShapeBoundedResource": {

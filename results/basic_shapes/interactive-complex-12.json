@@ -2,19 +2,19 @@
   "conditionalLink": [],
   "starPatternsContainment": {
     "rootPerson": {
-      "result": 0,
+      "result": "CONTAIN",
       "target": [
         "http://exemple.ca/profile.shexc"
       ]
     },
     "fr": {
-      "result": 0,
+      "result": "CONTAIN",
       "target": [
         "http://exemple.ca/profile.shexc"
       ]
     },
     "reply": {
-      "result": 1,
+      "result": "ALIGNED",
       "target": [
         "http://exemple.ca/posts.shexc",
         "http://exemple.ca/comments.shexc"
@@ -22,16 +22,16 @@
       "bindingByRdfClass": []
     },
     "post": {
-      "result": 0,
+      "result": "CONTAIN",
       "target": [
         "http://exemple.ca/posts.shexc"
       ]
     },
     "tag": {
-      "result": 2
+      "result": "DEPEND"
     },
     "tagSuperType": {
-      "result": 3
+      "result": "REJECTED"
     }
   },
   "visitShapeBoundedResource": {
