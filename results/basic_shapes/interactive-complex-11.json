@@ -1,0 +1,40 @@
+{
+  "conditionalLink": [],
+  "starPatternsContainment": {
+    "rootPerson": {
+      "result": 0,
+      "target": [
+        "http://exemple.ca/profile.shexc"
+      ]
+    },
+    "fr": {
+      "result": 1,
+      "target": [
+        "http://exemple.ca/posts.shexc",
+        "http://exemple.ca/profile.shexc",
+        "http://exemple.ca/comments.shexc"
+      ],
+      "bindingByRdfClass": []
+    },
+    "work": {
+      "result": 3
+    },
+    "org": {
+      "result": 1,
+      "target": [
+        "http://exemple.ca/posts.shexc",
+        "http://exemple.ca/profile.shexc",
+        "http://exemple.ca/comments.shexc"
+      ],
+      "bindingByRdfClass": []
+    },
+    "country": {
+      "result": 3
+    }
+  },
+  "visitShapeBoundedResource": {
+    "http://exemple.ca/posts.shexc": true,
+    "http://exemple.ca/profile.shexc": true,
+    "http://exemple.ca/comments.shexc": true
+  }
+}

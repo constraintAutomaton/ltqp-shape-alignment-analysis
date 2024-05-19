@@ -28,7 +28,7 @@
     "global": "^4.4.0",
     "jsonld-streaming-parser": "^3.4.0",
     "markdown-table": "^3.0.3",
-    "query-shape-detection": "^0.0.8",
+    "query-shape-detection": "0.1.2",
     "sparqlalgebrajs": "^4.3.4"
   },
   "scripts": {

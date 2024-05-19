@@ -1,0 +1,29 @@
+{
+  "conditionalLink": [],
+  "starPatternsContainment": {
+    "rootPerson": {
+      "result": 0,
+      "target": [
+        "http://exemple.ca/profile.shexc"
+      ]
+    },
+    "fr": {
+      "result": 2,
+      "target": [
+        "http://exemple.ca/profile.shexc"
+      ]
+    },
+    "message": {
+      "result": 0,
+      "target": [
+        "http://exemple.ca/posts.shexc",
+        "http://exemple.ca/comments.shexc"
+      ]
+    }
+  },
+  "visitShapeBoundedResource": {
+    "http://exemple.ca/posts.shexc": true,
+    "http://exemple.ca/profile.shexc": true,
+    "http://exemple.ca/comments.shexc": true
+  }
+}

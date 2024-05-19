@@ -1,0 +1,40 @@
+{
+  "conditionalLink": [
+    {
+      "link": "http://localhost:3000/dbpedia.org/ontology/Country",
+      "starPatternName": "country"
+    }
+  ],
+  "starPatternsContainment": {
+    "rootPerson": {
+      "result": 0,
+      "target": [
+        "http://exemple.ca/profile.shexc"
+      ]
+    },
+    "fr": {
+      "result": 2,
+      "target": [
+        "http://exemple.ca/profile.shexc"
+      ]
+    },
+    "var1": {
+      "result": 2
+    },
+    "country": {
+      "result": 2
+    },
+    "message": {
+      "result": 0,
+      "target": [
+        "http://exemple.ca/posts.shexc",
+        "http://exemple.ca/comments.shexc"
+      ]
+    }
+  },
+  "visitShapeBoundedResource": {
+    "http://exemple.ca/posts.shexc": true,
+    "http://exemple.ca/profile.shexc": true,
+    "http://exemple.ca/comments.shexc": true
+  }
+}

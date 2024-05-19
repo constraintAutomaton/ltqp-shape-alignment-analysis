@@ -1,0 +1,77 @@
+{
+  "conditionalLink": [],
+  "starPatternsContainment": {
+    "rootPerson": {
+      "result": 0,
+      "target": [
+        "http://exemple.ca/profile.shexc"
+      ]
+    },
+    "fr": {
+      "result": 0,
+      "target": [
+        "http://exemple.ca/profile.shexc"
+      ]
+    },
+    "basedURI": {
+      "result": 2
+    },
+    "frInner": {
+      "result": 1,
+      "target": [
+        "http://exemple.ca/profile.shexc"
+      ],
+      "bindingByRdfClass": [
+        "http://exemple.ca/profile.shexc"
+      ]
+    },
+    "study": {
+      "result": 3
+    },
+    "uni": {
+      "result": 1,
+      "target": [
+        "http://exemple.ca/posts.shexc",
+        "http://exemple.ca/profile.shexc",
+        "http://exemple.ca/comments.shexc"
+      ],
+      "bindingByRdfClass": []
+    },
+    "var0": {
+      "result": 3
+    },
+    "frInnerUni": {
+      "result": 0,
+      "target": [
+        "http://exemple.ca/posts.shexc",
+        "http://exemple.ca/profile.shexc",
+        "http://exemple.ca/comments.shexc"
+      ]
+    },
+    "work": {
+      "result": 3
+    },
+    "company": {
+      "result": 1,
+      "target": [
+        "http://exemple.ca/posts.shexc",
+        "http://exemple.ca/profile.shexc",
+        "http://exemple.ca/comments.shexc"
+      ],
+      "bindingByRdfClass": []
+    },
+    "frInnerComp": {
+      "result": 0,
+      "target": [
+        "http://exemple.ca/posts.shexc",
+        "http://exemple.ca/profile.shexc",
+        "http://exemple.ca/comments.shexc"
+      ]
+    }
+  },
+  "visitShapeBoundedResource": {
+    "http://exemple.ca/posts.shexc": true,
+    "http://exemple.ca/profile.shexc": true,
+    "http://exemple.ca/comments.shexc": true
+  }
+}

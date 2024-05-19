@@ -2,15 +2,20 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 PREFIX ldbcvoc: <http://localhost:3000/www.ldbc.eu/ldbc_socialnet/1.0/vocabulary/>
 PREFIX schema: <http://www.w3.org/2000/01/rdf-schema#>
 
-<$> CLOSED {
+<http://exemple.ca/comments.shexc> CLOSED {
     a ldbcvoc:Comment?;
     ldbcvoc:id xsd:long ;
     ldbcvoc:creationDate xsd:dateTime ;
-    ldbcvoc:locationIP xsd:string ;
+    ldbcvoc:locationIP xsd:string  ;
     ldbcvoc:browserUsed xsd:string ;
-    ldbcvoc:content xsd:string ;
+    ldbcvoc:content xsd:string?;
     ldbcvoc:lenght xsd:int ;
-    ldbcvoc:replyOf IRI ; # Could be more precise
-    ldbcvoc:isLocatedIn IRI ; # Could be more precise let's create a shape pod for this kind of thing
-    ldbcvoc:hasCreator IRI ; # similar comment
+    ldbcvoc:hasTag IRI *;
+    (
+        ldbcvoc:replyOf @<http://exemple.ca/posts.shexc> *;
+        |
+        ldbcvoc:replyOf @<http://exemple.ca/comments.shexc> *;
+    );
+    ldbcvoc:isLocatedIn IRI ;
+    ldbcvoc:hasCreator @<http://exemple.ca/profile.shexc> ;
 }

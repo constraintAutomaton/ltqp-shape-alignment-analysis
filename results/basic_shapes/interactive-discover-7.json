@@ -1,0 +1,26 @@
+{
+  "conditionalLink": [],
+  "starPatternsContainment": {
+    "message": {
+      "result": 0,
+      "target": [
+        "http://exemple.ca/posts.shexc",
+        "http://exemple.ca/comments.shexc"
+      ]
+    },
+    "forum": {
+      "result": 3
+    },
+    "moderator": {
+      "result": 0,
+      "target": [
+        "http://exemple.ca/profile.shexc"
+      ]
+    }
+  },
+  "visitShapeBoundedResource": {
+    "http://exemple.ca/posts.shexc": true,
+    "http://exemple.ca/profile.shexc": true,
+    "http://exemple.ca/comments.shexc": true
+  }
+}

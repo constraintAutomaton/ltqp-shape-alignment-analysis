@@ -1,0 +1,45 @@
+{
+  "conditionalLink": [
+    {
+      "link": "http://localhost:3000/www.ldbc.eu/ldbc_socialnet/1.0/vocabulary/Forum",
+      "starPatternName": "forum"
+    }
+  ],
+  "starPatternsContainment": {
+    "rootPerson": {
+      "result": 0,
+      "target": [
+        "http://exemple.ca/profile.shexc"
+      ]
+    },
+    "fr": {
+      "result": 2,
+      "target": [
+        "http://exemple.ca/profile.shexc"
+      ]
+    },
+    "forum": {
+      "result": 1,
+      "target": [
+        "http://exemple.ca/posts.shexc",
+        "http://exemple.ca/profile.shexc",
+        "http://exemple.ca/comments.shexc"
+      ],
+      "bindingByRdfClass": []
+    },
+    "mem": {
+      "result": 3
+    },
+    "post": {
+      "result": 0,
+      "target": [
+        "http://exemple.ca/posts.shexc"
+      ]
+    }
+  },
+  "visitShapeBoundedResource": {
+    "http://exemple.ca/posts.shexc": true,
+    "http://exemple.ca/profile.shexc": true,
+    "http://exemple.ca/comments.shexc": true
+  }
+}

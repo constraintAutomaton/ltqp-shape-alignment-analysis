@@ -4,10 +4,10 @@ import { join } from 'node:path';
 import {
     type IShape,
     shapeFromQuads,
-    type Query,
+    type IQuery,
     generateQuery,
     IResult,
-    AlignmentType
+    ContainmentResult
 } from "query-shape-detection";
 import type * as RDF from '@rdfjs/types';
 import * as ShexParser from '@shexjs/parser';
@@ -15,8 +15,8 @@ import { translate } from "sparqlalgebrajs";
 
 import * as SHEX_CONTEXT from './shex_context.json';
 
-export async function prepareQueries(queries_directory: string): Promise<[string, Query][]> {
-    const query_map: [string, Query][] = [];
+export async function prepareQueries(queries_directory: string): Promise<[string, IQuery][]> {
+    const query_map: [string, IQuery][] = [];
     const files = (await fs.readdir(queries_directory)).sort();
     for (const file of files) {
         const file_without_extension = file.substring(0, Math.max(file.indexOf('.'), 0));
@@ -53,32 +53,23 @@ export async function prepareShapes(shape_directory: string): Promise<IShape[]> 
     return shapes;
 }
 
-export function getQueryTable(res: IResult): Map<string, string> {
+export function getQueryTable(res: IResult, allShapes: IShape[]): [Map<string, string>,boolean] {
     const alignment = new Map<string, string>();
-    for (const table_entry of res.alignedTable.values()) {
-        for (const [shape_name, shape_result] of table_entry) {
-            const alignment_result = alignment.get(shape_name);
-            const current_shape_result_string = alignmentTypeToString(shape_result);
-            if (alignment_result === undefined) {
-                alignment.set(shape_name, current_shape_result_string);
-            }
-            if (alignment_result === alignmentTypeToString(AlignmentType.None)) {
-                alignment.set(shape_name, current_shape_result_string)
-            }
+    let allContained = true;
+    for (const result of res.starPatternsContainment.values()) {
+        if (result.result === ContainmentResult.ALIGNED || result.result === ContainmentResult.REJECTED) {
+            allContained = false;
+        }
+        for (const target of result.target ?? []) {
+            alignment.set(target, String(true))
         }
     }
-    return alignment;
-}
-
-export function alignmentTypeToString(alignment: AlignmentType): string {
-    switch (alignment) {
-        case AlignmentType.None:
-            return "None";
-        case AlignmentType.STRONG:
-            return "Strong";
-        case AlignmentType.WEAK:
-            return "Weak"
+    for (const shape of allShapes) {
+        if (!alignment.has(shape.name)) {
+            alignment.set(shape.name, String(false));
+        }
     }
+    return [alignment,allContained];
 }
 
 export function parseShexShape(stringShapeJsonLD: string): Promise<RDF.Quad[]> {
@@ -112,14 +103,22 @@ export function toObject(result: IResult): any {
     const res: any = {
         ...result
     };
-    const aligned_table = Object.fromEntries(
-        Array.from(res.alignedTable.entries()
+    const visitShapeBoundedResource = Object.fromEntries(
+        Array.from(res.visitShapeBoundedResource.entries()
             , ([k, v]) =>
                 v instanceof Map
                     ? [k, toObjectInner(v)]
                     : [k, v])
-    )
-    res.alignedTable = aligned_table;
+    );
+    const starPatternsContainment = Object.fromEntries(
+        Array.from(res.starPatternsContainment.entries()
+            , ([k, v]) =>
+                v instanceof Map
+                    ? [k, toObjectInner(v)]
+                    : [k, v])
+    );
+    res.visitShapeBoundedResource = visitShapeBoundedResource;
+    res.starPatternsContainment = starPatternsContainment;
     return res;
 }
 
