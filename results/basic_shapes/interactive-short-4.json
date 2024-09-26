@@ -5,7 +5,6 @@
       "result": "CONTAIN",
       "target": [
         "http://exemple.ca/posts.shexc",
-        "http://exemple.ca/profile.shexc",
         "http://exemple.ca/comments.shexc"
       ]
     }

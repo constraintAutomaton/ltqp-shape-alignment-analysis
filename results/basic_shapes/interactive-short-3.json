@@ -5,27 +5,17 @@
       "result": "ALIGNED",
       "target": [
         "http://exemple.ca/posts.shexc",
-        "http://exemple.ca/profile.shexc",
-        "http://exemple.ca/comments.shexc"
-      ],
-      "bindingByRdfClass": [
-        "http://exemple.ca/profile.shexc"
-      ]
-    },
-    "knows": {
-      "result": "ALIGNED",
-      "target": [
-        "http://exemple.ca/posts.shexc",
-        "http://exemple.ca/profile.shexc",
         "http://exemple.ca/comments.shexc"
       ],
       "bindingByRdfClass": []
+    },
+    "knows": {
+      "result": "REJECTED"
     },
     "person": {
       "result": "ALIGNED",
       "target": [
         "http://exemple.ca/posts.shexc",
-        "http://exemple.ca/profile.shexc",
         "http://exemple.ca/comments.shexc"
       ],
       "bindingByRdfClass": []
