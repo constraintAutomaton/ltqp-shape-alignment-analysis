@@ -28,11 +28,12 @@
     "global": "^4.4.0",
     "jsonld-streaming-parser": "^3.4.0",
     "markdown-table": "^3.0.3",
-    "query-shape-detection": "^0.2.0",
+    "query-shape-detection": "^0.2.3",
     "sparqlalgebrajs": "^4.3.4"
   },
   "scripts": {
     "lint": "eslint --fix .",
     "clean": "rm -r ./results/*"
-  }
+  },
+  "packageManager": "yarn@1.22.22+sha1.ac34549e6aa8e7ead463a7407e1c7390f61a6610"
 }

@@ -2,16 +2,15 @@
   "conditionalLink": [],
   "starPatternsContainment": {
     "message": {
-      "result": "ALIGNED",
+      "result": "CONTAIN",
       "target": [
         "http://exemple.ca/posts.shexc",
         "http://exemple.ca/profile.shexc",
         "http://exemple.ca/comments.shexc"
-      ],
-      "bindingByRdfClass": []
+      ]
     },
     "originalPostInner": {
-      "result": "CONTAIN",
+      "result": "DEPEND",
       "target": [
         "http://exemple.ca/posts.shexc"
       ]

@@ -9,7 +9,8 @@
       ]
     },
     "tag": {
-      "result": "DEPEND"
+      "result": "DEPEND",
+      "target": []
     }
   },
   "visitShapeBoundedResource": {

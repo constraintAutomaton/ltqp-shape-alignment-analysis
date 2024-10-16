@@ -10,9 +10,7 @@
     },
     "messageCreator": {
       "result": "DEPEND",
-      "target": [
-        "http://exemple.ca/profile.shexc"
-      ]
+      "target": []
     },
     "comment": {
       "result": "CONTAIN",
@@ -22,9 +20,7 @@
     },
     "replyAuthor": {
       "result": "DEPEND",
-      "target": [
-        "http://exemple.ca/profile.shexc"
-      ]
+      "target": []
     }
   },
   "visitShapeBoundedResource": {
