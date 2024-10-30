@@ -1,0 +1,12 @@
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX ldbcvoc: <http://localhost:3000/www.ldbc.eu/ldbc_socialnet/1.0/vocabulary/>
+PREFIX schema: <http://www.w3.org/2000/01/rdf-schema#>
+
+<http://exemple.ca/likes.shexc> CLOSED {
+    (
+        ldbcvoc:hasPost @<http://exemple.ca/posts.shexc>;
+        |
+        ldbcvoc:hasComment @<http://exemple.ca/comments.shexc>;
+    );
+    ldbcvoc:creationDate xsd:date;
+}

@@ -33,6 +33,8 @@
   },
   "visitShapeBoundedResource": {
     "http://exemple.ca/comments.shexc": true,
+    "http://exemple.ca/knows.shexc": true,
+    "http://exemple.ca/likes.shexc": true,
     "http://exemple.ca/posts.shexc": true,
     "http://exemple.ca/profile.shexc": true
   }

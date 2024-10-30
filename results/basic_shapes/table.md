@@ -1,20 +1,20 @@
-| query                       | http://exemple.ca/comments.shexc | http://exemple.ca/posts.shexc | http://exemple.ca/profile.shexc | can prune domain |
-| --------------------------- | -------------------------------- | ----------------------------- | ------------------------------- | ---------------- |
-| interactive-discover-1      | false                            | true                          | false                           | true             |
-| interactive-discover-2      | true                             | true                          | false                           | true             |
-| interactive-discover-3      | true                             | true                          | false                           | true             |
-| interactive-discover-4      | true                             | false                         | false                           | true             |
-| interactive-discover-5      | true                             | true                          | false                           | true             |
-| interactive-discover-6      | true                             | true                          | true                            | false            |
-| interactive-discover-7      | true                             | true                          | true                            | false            |
-| interactive-discover-8      | true                             | true                          | true                            | false            |
-| interactive-short-1-nocity  | false                            | false                         | true                            | true             |
-| interactive-short-1         | false                            | false                         | true                            | true             |
-| interactive-short-2         | true                             | true                          | true                            | false            |
-| interactive-short-3-unidir  | false                            | false                         | true                            | true             |
-| interactive-short-3         | false                            | false                         | true                            | true             |
-| interactive-short-4-creator | true                             | true                          | false                           | true             |
-| interactive-short-4         | true                             | true                          | false                           | true             |
-| interactive-short-5         | true                             | true                          | true                            | false            |
-| interactive-short-6         | true                             | true                          | true                            | false            |
-| interactive-short-7         | true                             | true                          | true                            | false            |
+| query                       | http://exemple.ca/comments.shexc | http://exemple.ca/knows.shexc | http://exemple.ca/likes.shexc | http://exemple.ca/posts.shexc | http://exemple.ca/profile.shexc | can prune domain |
+| --------------------------- | -------------------------------- | ----------------------------- | ----------------------------- | ----------------------------- | ------------------------------- | ---------------- |
+| interactive-discover-1      | false                            | false                         | false                         | true                          | false                           | true             |
+| interactive-discover-2      | true                             | false                         | false                         | true                          | false                           | true             |
+| interactive-discover-3      | true                             | false                         | false                         | true                          | false                           | false            |
+| interactive-discover-4      | true                             | false                         | false                         | false                         | false                           | false            |
+| interactive-discover-5      | true                             | false                         | false                         | true                          | false                           | true             |
+| interactive-discover-6      | true                             | false                         | false                         | true                          | true                            | false            |
+| interactive-discover-7      | true                             | false                         | false                         | true                          | true                            | true             |
+| interactive-discover-8      | true                             | false                         | false                         | true                          | true                            | true             |
+| interactive-short-1-nocity  | false                            | false                         | false                         | false                         | true                            | true             |
+| interactive-short-1         | true                             | false                         | false                         | true                          | true                            | false            |
+| interactive-short-2         | true                             | false                         | false                         | true                          | true                            | false            |
+| interactive-short-3-unidir  | false                            | true                          | false                         | false                         | true                            | false            |
+| interactive-short-3         | false                            | true                          | false                         | false                         | true                            | true             |
+| interactive-short-4-creator | true                             | false                         | false                         | true                          | false                           | true             |
+| interactive-short-4         | true                             | false                         | false                         | true                          | false                           | true             |
+| interactive-short-5         | true                             | false                         | false                         | true                          | true                            | false            |
+| interactive-short-6         | true                             | false                         | false                         | true                          | true                            | false            |
+| interactive-short-7         | true                             | false                         | false                         | true                          | true                            | false            |

@@ -18,6 +18,6 @@ PREFIX schema: <http://www.w3.org/2000/01/rdf-schema#>
     ldbcvoc:email xsd:string *;
     ldbcvoc:hasInterest IRI *;
     ldbcvoc:studyAt IRI *;
-    ldbcvoc:likes IRI *;
-    ldbcvoc:knows IRI *;
+    ldbcvoc:likes @<http://exemple.ca/likes.shexc> *;
+    ldbcvoc:knows @<http://exemple.ca/knows.shexc> *;
 }

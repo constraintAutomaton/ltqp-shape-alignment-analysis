@@ -55,16 +55,18 @@ export async function prepareShapes(shape_directory: string): Promise<IShape[]> 
 
 export function getQueryTable(res: IResult, allShapes: IShape[]): [Map<string, string>,boolean] {
     const alignment = new Map<string, string>();
-    let allContained = false;
+    let allContained = true;
     for (const result of res.starPatternsContainment.values()) {
         for (const target of result.target ?? []) {
             alignment.set(target, String(true))
+        }
+        if(result.result === ContainmentResult.ALIGNED || (result.result === ContainmentResult.DEPEND)){
+            allContained = false;
         }
     }
     for (const shape of allShapes) {
         if (!alignment.has(shape.name)) {
             alignment.set(shape.name, String(false));
-            allContained = true;
         }
     }
     return [alignment,allContained];
