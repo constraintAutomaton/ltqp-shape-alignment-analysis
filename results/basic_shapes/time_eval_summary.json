@@ -1,25 +1,25 @@
 {
   "interactive-discover-1": {
     "average": 0.05,
-    "std": 0.21898526309901634,
+    "std": 0.22127956630616957,
     "max": 1,
     "min": 0
   },
   "interactive-discover-2": {
-    "average": 0.05,
-    "std": 0.21898526309901653,
-    "max": 1,
+    "average": 0.07,
+    "std": 0.29550675529375364,
+    "max": 2,
     "min": 0
   },
   "interactive-discover-3": {
     "average": 0.03,
-    "std": 0.1714200935854618,
+    "std": 0.17142009358546176,
     "max": 1,
     "min": 0
   },
   "interactive-discover-4": {
     "average": 0.03,
-    "std": 0.17142009358546184,
+    "std": 0.1714200935854618,
     "max": 1,
     "min": 0
   },
@@ -31,61 +31,61 @@
   },
   "interactive-discover-6": {
     "average": 0.03,
-    "std": 0.17317883557441152,
+    "std": 0.17142009358546173,
     "max": 1,
     "min": 0
   },
   "interactive-discover-7": {
     "average": 0.03,
-    "std": 0.1714200935854618,
+    "std": 0.17142009358546179,
     "max": 1,
     "min": 0
   },
   "interactive-discover-8": {
     "average": 0.04,
-    "std": 0.19690535079503843,
+    "std": 0.19690535079503838,
     "max": 1,
     "min": 0
   },
   "interactive-short-1-nocity": {
     "average": 0.04,
-    "std": 0.19690535079503838,
+    "std": 0.19690535079503843,
     "max": 1,
     "min": 0
   },
   "interactive-short-1": {
     "average": 0.06,
-    "std": 0.23860706890897693,
+    "std": 0.238607068908977,
     "max": 1,
     "min": 0
   },
   "interactive-short-2": {
-    "average": 0.13,
-    "std": 0.3377450475902156,
+    "average": 0.14,
+    "std": 0.348451118262206,
     "max": 1,
     "min": 0
   },
   "interactive-short-3-unidir": {
-    "average": 0.05,
-    "std": 0.22127956630616943,
+    "average": 0.06,
+    "std": 0.238607068908977,
     "max": 1,
     "min": 0
   },
   "interactive-short-3": {
-    "average": 0.06,
-    "std": 0.23860706890897695,
+    "average": 0.07,
+    "std": 0.256335874992325,
     "max": 1,
     "min": 0
   },
   "interactive-short-4-creator": {
-    "average": 0.03,
-    "std": 0.17142009358546179,
+    "average": 0.04,
+    "std": 0.19690535079503838,
     "max": 1,
     "min": 0
   },
   "interactive-short-4": {
     "average": 0.03,
-    "std": 0.17142009358546184,
+    "std": 0.17142009358546173,
     "max": 1,
     "min": 0
   },
@@ -96,14 +96,14 @@
     "min": 0
   },
   "interactive-short-6": {
-    "average": 0.07,
-    "std": 0.25633587499232496,
+    "average": 0.05,
+    "std": 0.21898526309901653,
     "max": 1,
     "min": 0
   },
   "interactive-short-7": {
-    "average": 0.11,
-    "std": 0.3142716447067199,
+    "average": 0.12,
+    "std": 0.3263758755196411,
     "max": 1,
     "min": 0
   }

@@ -19,4 +19,5 @@ PREFIX schema: <http://www.w3.org/2000/01/rdf-schema#>
     ldbcvoc:hasInterest IRI *;
     ldbcvoc:studyAt IRI *;
     ldbcvoc:likes IRI *;
+    ldbcvoc:knows IRI *;
 }
