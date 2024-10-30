@@ -54,9 +54,9 @@ export async function timeEval(shapes: { values: IShape[], label: string }, resu
     for (const [query_name, query] of query_map) {
         const times = [];
         for (let i = 0; i < nRepetition; i++) {
-            const start = Date.now();
+            const start = performance.now();
             const _ = solveShapeQueryContainment({ query, shapes: shapes.values });
-            const end = Date.now();
+            const end = performance.now();
             times.push(end - start);
         }
         const average = times.reduce((acc, current) => acc + current) / times.length;
