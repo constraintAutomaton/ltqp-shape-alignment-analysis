@@ -1,5 +1,5 @@
 {
-  "name": "query-shape-alignment-table",
+  "name": "query-shape-alignment-analysis",
   "module": "index.ts",
   "type": "module",
   "devDependencies": {
@@ -25,6 +25,7 @@
     "@shexjs/parser": "1.0.0-alpha.26",
     "@shexjs/visitor": "1.0.0-alpha.25",
     "@types/shexj": "^2.1.4",
+    "commander": "^12.1.0",
     "global": "^4.4.0",
     "jsonld-streaming-parser": "^3.4.0",
     "markdown-table": "^3.0.3",
@@ -32,6 +33,7 @@
     "sparqlalgebrajs": "^4.3.4"
   },
   "scripts": {
+    "benchmark": "bun build index.ts --outdir ./build --target node && node ./build/index.js -a && node ./build/index.js -t && node ./build/index.js -t -w",
     "lint": "eslint --fix .",
     "clean": "rm -r ./results/*"
   },

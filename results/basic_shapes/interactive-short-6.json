@@ -4,9 +4,9 @@
     "message": {
       "result": "CONTAIN",
       "target": [
+        "http://exemple.ca/comments.shexc",
         "http://exemple.ca/posts.shexc",
-        "http://exemple.ca/profile.shexc",
-        "http://exemple.ca/comments.shexc"
+        "http://exemple.ca/profile.shexc"
       ]
     },
     "originalPostInner": {
@@ -18,9 +18,9 @@
     "forum": {
       "result": "ALIGNED",
       "target": [
+        "http://exemple.ca/comments.shexc",
         "http://exemple.ca/posts.shexc",
-        "http://exemple.ca/profile.shexc",
-        "http://exemple.ca/comments.shexc"
+        "http://exemple.ca/profile.shexc"
       ],
       "bindingByRdfClass": []
     },
@@ -32,8 +32,8 @@
     }
   },
   "visitShapeBoundedResource": {
+    "http://exemple.ca/comments.shexc": true,
     "http://exemple.ca/posts.shexc": true,
-    "http://exemple.ca/profile.shexc": true,
-    "http://exemple.ca/comments.shexc": true
+    "http://exemple.ca/profile.shexc": true
   }
 }

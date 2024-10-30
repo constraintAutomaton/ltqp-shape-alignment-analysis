@@ -4,14 +4,14 @@
     "message": {
       "result": "CONTAIN",
       "target": [
-        "http://exemple.ca/posts.shexc",
-        "http://exemple.ca/comments.shexc"
+        "http://exemple.ca/comments.shexc",
+        "http://exemple.ca/posts.shexc"
       ]
     }
   },
   "visitShapeBoundedResource": {
+    "http://exemple.ca/comments.shexc": true,
     "http://exemple.ca/posts.shexc": true,
-    "http://exemple.ca/profile.shexc": true,
-    "http://exemple.ca/comments.shexc": true
+    "http://exemple.ca/profile.shexc": true
   }
 }

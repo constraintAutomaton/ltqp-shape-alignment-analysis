@@ -13,14 +13,14 @@ import type * as RDF from '@rdfjs/types';
 import * as ShexParser from '@shexjs/parser';
 import { translate } from "sparqlalgebrajs";
 
-import * as SHEX_CONTEXT from './shex_context.json';
+const SHEX_CONTEXT =JSON.parse((await fs.readFile('./shex_context.json')).toString());
 
 export async function prepareQueries(queries_directory: string): Promise<[string, IQuery][]> {
     const query_map: [string, IQuery][] = [];
     const files = (await fs.readdir(queries_directory)).sort();
     for (const file of files) {
         const file_without_extension = file.substring(0, Math.max(file.indexOf('.'), 0));
-        const text = await (Bun.file(join(queries_directory, file)).text());
+        const text = (await fs.readFile(join(queries_directory, file))).toString();
         try {
             const query = generateQuery(translate(text));
             query_map.push([file_without_extension, query]);
@@ -38,7 +38,7 @@ export async function prepareShapes(shape_directory: string): Promise<IShape[]> 
     for (const file of await fs.readdir(shape_directory)) {
         const shape_name = `http://exemple.ca/${file}`;
         const shexParser = ShexParser.construct(shape_name);
-        let shapeShexc = await Bun.file(join(shape_directory, file)).text();
+        let shapeShexc = (await fs.readFile(join(shape_directory, file))).toString();
         shapeShexc = shapeShexc.replace('$', shape_name);
         const shapeJSONLD = shexParser.parse(shapeShexc);
         const stringShapeJsonLD = JSON.stringify(shapeJSONLD);

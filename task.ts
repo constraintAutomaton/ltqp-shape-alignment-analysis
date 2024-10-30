@@ -4,9 +4,8 @@ import { markdownTable } from 'markdown-table'
 import { getQueryTable, toObject } from './helper';
 import { join } from 'node:path';
 import * as fs from "node:fs/promises";
-
-export async function containmentAnalysis(shapes: {values: IShape[], label:string}, result_directory: string, query_map: [string, IQuery][]) {
-    const COMPLETE_RESULT_LABEL = "a priori complete search space";
+export async function containmentAnalysis(shapes: { values: IShape[], label: string }, result_directory: string, query_map: [string, IQuery][]) {
+    const COMPLETE_RESULT_LABEL = "can prune domain";
 
     const label_column: string[] = ["query"].concat(shapes.values.map((shape) => shape.name)).concat(COMPLETE_RESULT_LABEL);
 
@@ -14,14 +13,16 @@ export async function containmentAnalysis(shapes: {values: IShape[], label:strin
     const table: string[][] = [label_column];
     console.log('-----');
     const current_result_folder = join(result_directory, shapes.label);
-    if (!await (fs.exists(current_result_folder))) {
+    try {
+        await fs.access(current_result_folder)
+    } catch {
         await fs.mkdir(current_result_folder);
     }
 
     for (const [query_name, query] of query_map) {
         console.log(`Query ${query_name} report created`);
-        const res = solveShapeQueryContainment({ query, shapes:shapes.values });
-        await Bun.write(join(current_result_folder, `${query_name}.json`), JSON.stringify(toObject(res), (key, value) => {
+        const res = solveShapeQueryContainment({ query, shapes: shapes.values });
+        await fs.writeFile(join(current_result_folder, `${query_name}.json`), JSON.stringify(toObject(res), (key, value) => {
             if (key === "result") {
                 return ContainmentResult[value];
             }
@@ -36,6 +37,56 @@ export async function containmentAnalysis(shapes: {values: IShape[], label:strin
         table.push(column);
     }
     const markdown_table = markdownTable(table);
-    await Bun.write(join(current_result_folder, 'table.md'), markdown_table);
+    await fs.writeFile(join(current_result_folder, 'table.md'), markdown_table);
     console.log('-----');
+}
+
+export async function timeEval(shapes: { values: IShape[], label: string }, result_directory: string, query_map: [string, IQuery][], nRepetition: number, warmUp: boolean = false, hadWarmUp: boolean = false) {
+    console.log('-----');
+    const current_result_folder = join(result_directory, shapes.label);
+    try {
+        await fs.access(current_result_folder)
+    } catch {
+        await fs.mkdir(current_result_folder);
+    }
+
+    const results: Record<string, IEvalResult> = {};
+    for (const [query_name, query] of query_map) {
+        const times = [];
+        for (let i = 0; i < nRepetition; i++) {
+            const start = Date.now();
+            const _ = solveShapeQueryContainment({ query, shapes: shapes.values });
+            const end = Date.now();
+            times.push(end - start);
+        }
+        const average = times.reduce((acc, current) => acc + current) / times.length;
+        const std = Math.sqrt(times.reduce((acc, current) => acc + Math.pow(current - average, 2)) / (times.length - 1));
+        results[query_name] = {
+            times,
+            average,
+            std,
+            max: Math.max(...times),
+            min: Math.min(...times),
+        };
+        console.log(`Query ${query_name} time evaluated`);
+    }
+    if (!warmUp) {
+        await fs.writeFile(join(current_result_folder, `time_eval${hadWarmUp ? "_with_warm_up" : ""}.json`), JSON.stringify(results, null, 2));
+
+        await fs.writeFile(join(current_result_folder, `time_eval_summary${hadWarmUp ? "_with_warm_up" : ""}.json`), JSON.stringify(results, (key: string, value: unknown) => {
+            if (key == "times") {
+                return undefined;
+            } else {
+                return value;
+            }
+        }, 2));
+    }
+}
+
+interface IEvalResult {
+    times: number[];
+    average: number;
+    std: number;
+    max: number;
+    min: number;
 }
