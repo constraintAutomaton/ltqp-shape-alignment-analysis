@@ -16,6 +16,7 @@
     }
   },
   "visitShapeBoundedResource": {
+    "http://exemple.ca/city.shexc": true,
     "http://exemple.ca/comments.shexc": true,
     "http://exemple.ca/knows.shexc": false,
     "http://exemple.ca/likes.shexc": false,

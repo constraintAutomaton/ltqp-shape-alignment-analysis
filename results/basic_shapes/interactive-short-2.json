@@ -4,6 +4,7 @@
     "person": {
       "result": "DEPEND",
       "target": [
+        "http://exemple.ca/city.shexc",
         "http://exemple.ca/profile.shexc"
       ]
     },
@@ -15,10 +16,7 @@
       ]
     },
     "originalPostInner": {
-      "result": "DEPEND",
-      "target": [
-        "http://exemple.ca/posts.shexc"
-      ]
+      "result": "DEPEND"
     },
     "originalPost": {
       "result": "CONTAIN",
@@ -35,6 +33,7 @@
     }
   },
   "visitShapeBoundedResource": {
+    "http://exemple.ca/city.shexc": true,
     "http://exemple.ca/comments.shexc": true,
     "http://exemple.ca/knows.shexc": true,
     "http://exemple.ca/likes.shexc": true,

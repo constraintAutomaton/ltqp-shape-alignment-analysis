@@ -5,7 +5,7 @@ import { getQueryTable, toObject } from './helper';
 import { join } from 'node:path';
 import * as fs from "node:fs/promises";
 export async function containmentAnalysis(shapes: { values: IShape[], label: string }, result_directory: string, query_map: [string, IQuery][]) {
-    const COMPLETE_RESULT_LABEL = "can prune domain";
+    const COMPLETE_RESULT_LABEL = "Search domain knowledge";
 
     const label_column: string[] = ["query"].concat(shapes.values.map((shape) => shape.name)).concat(COMPLETE_RESULT_LABEL);
 

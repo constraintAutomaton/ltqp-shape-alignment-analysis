@@ -13,7 +13,7 @@ PREFIX schema: <http://www.w3.org/2000/01/rdf-schema#>
     ldbcvoc:locationIP xsd:string;
     ldbcvoc:browserUsed xsd:string;
     ldbcvoc:creationDate xsd:date;
-    ldbcvoc:isLocatedIn IRI;
+    ldbcvoc:isLocatedIn @<http://exemple.ca/city.shexc>;
     ldbcvoc:speaks xsd:string + ;
     ldbcvoc:email xsd:string *;
     ldbcvoc:hasInterest IRI *;

@@ -10,13 +10,12 @@
     "city": {
       "result": "DEPEND",
       "target": [
-        "http://exemple.ca/comments.shexc",
-        "http://exemple.ca/posts.shexc",
-        "http://exemple.ca/profile.shexc"
+        "http://exemple.ca/city.shexc"
       ]
     }
   },
   "visitShapeBoundedResource": {
+    "http://exemple.ca/city.shexc": true,
     "http://exemple.ca/comments.shexc": true,
     "http://exemple.ca/knows.shexc": true,
     "http://exemple.ca/likes.shexc": true,

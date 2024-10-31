@@ -13,7 +13,7 @@ import type * as RDF from '@rdfjs/types';
 import * as ShexParser from '@shexjs/parser';
 import { translate } from "sparqlalgebrajs";
 
-const SHEX_CONTEXT =JSON.parse((await fs.readFile('./shex_context.json')).toString());
+const SHEX_CONTEXT = JSON.parse((await fs.readFile('./shex_context.json')).toString());
 
 export async function prepareQueries(queries_directory: string): Promise<[string, IQuery][]> {
     const query_map: [string, IQuery][] = [];
@@ -53,14 +53,14 @@ export async function prepareShapes(shape_directory: string): Promise<IShape[]> 
     return shapes;
 }
 
-export function getQueryTable(res: IResult, allShapes: IShape[]): [Map<string, string>,boolean] {
+export function getQueryTable(res: IResult, allShapes: IShape[]): [Map<string, string>, boolean] {
     const alignment = new Map<string, string>();
     let allContained = true;
     for (const result of res.starPatternsContainment.values()) {
         for (const target of result.target ?? []) {
             alignment.set(target, String(true))
         }
-        if(result.result === ContainmentResult.ALIGNED || (result.result === ContainmentResult.DEPEND)){
+        if (result.result === ContainmentResult.ALIGNED || (result.result === ContainmentResult.DEPEND && result.target === undefined)) {
             allContained = false;
         }
     }
@@ -69,7 +69,7 @@ export function getQueryTable(res: IResult, allShapes: IShape[]): [Map<string, s
             alignment.set(shape.name, String(false));
         }
     }
-    return [alignment,allContained];
+    return [alignment, allContained];
 }
 
 export function parseShexShape(stringShapeJsonLD: string): Promise<RDF.Quad[]> {
