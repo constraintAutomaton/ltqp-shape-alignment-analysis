@@ -42,7 +42,7 @@ export async function containmentAnalysis(shapes: { values: IShape[], label: str
     console.log('-----');
 }
 
-export async function timeEval(shapes: { values: IShape[], label: string }, result_directory: string, query_map: [string, IQuery][], nRepetition: number, warmUp: boolean = false, hadWarmUp: boolean = false) {
+export async function timeEval(shapes: { values: IShape[], label: string }, result_directory: string, query_map: [string, IQuery][], nRepetition: number, warmUp = false, hadWarmUp = false) {
     console.log('-----');
     const current_result_folder = join(result_directory, shapes.label);
     try {
@@ -56,7 +56,7 @@ export async function timeEval(shapes: { values: IShape[], label: string }, resu
         const times = [];
         for (let i = 0; i < nRepetition; i++) {
             const start = performance.now();
-            const _ = solveShapeQueryContainment({ query, shapes: shapes.values });
+            solveShapeQueryContainment({ query, shapes: shapes.values });
             const end = performance.now();
             times.push(end - start);
         }

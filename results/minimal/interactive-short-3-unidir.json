@@ -1,5 +1,4 @@
 {
-  "conditionalLink": [],
   "starPatternsContainment": {
     "rootPerson": {
       "result": "CONTAIN",
@@ -8,8 +7,7 @@
       ]
     },
     "knows": {
-      "result": "DEPEND",
-      "target": []
+      "result": "DEPEND"
     },
     "person": {
       "result": "DEPEND",

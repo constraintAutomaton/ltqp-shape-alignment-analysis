@@ -1,5 +1,4 @@
 {
-  "conditionalLink": [],
   "starPatternsContainment": {
     "message": {
       "result": "CONTAIN",
@@ -9,8 +8,7 @@
       ]
     },
     "tag": {
-      "result": "DEPEND",
-      "target": []
+      "result": "DEPEND"
     }
   },
   "visitShapeBoundedResource": {
