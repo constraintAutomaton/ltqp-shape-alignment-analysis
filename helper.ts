@@ -60,7 +60,7 @@ export function getQueryTable(res: IResult, allShapes: IShape[]): [Map<string, s
         for (const target of result.target ?? []) {
             alignment.set(target, String(true))
         }
-        if (result.result === ContainmentResult.ALIGNED || (result.result === ContainmentResult.DEPEND && result.target === undefined)) {
+        if (result.result === ContainmentResult.ALIGNED || (result.result === ContainmentResult.DEPEND && (result.target === undefined || result.target?.length === 0))) {
             allContained = false;
         }
     }
