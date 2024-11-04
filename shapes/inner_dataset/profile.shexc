@@ -1,0 +1,23 @@
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX ldbcvoc: <http://localhost:3000/www.ldbc.eu/ldbc_socialnet/1.0/vocabulary/>
+PREFIX schema: <http://www.w3.org/2000/01/rdf-schema#>
+
+<http://exemple.ca/profile.shexc> CLOSED {
+    a ldbcvoc:Person ?;
+    <http://www.w3.org/ns/pim/space#storage> IRI ? ;
+    ldbcvoc:id xsd:long;
+    ldbcvoc:firstName xsd:string;
+    ldbcvoc:lastName xsd:string;
+    ldbcvoc:gender ["male" "female" "other"];
+    ldbcvoc:birthday xsd:date;
+    ldbcvoc:locationIP xsd:string;
+    ldbcvoc:browserUsed xsd:string;
+    ldbcvoc:creationDate xsd:date;
+    ldbcvoc:isLocatedIn IRI;
+    ldbcvoc:speaks xsd:string + ;
+    ldbcvoc:email xsd:string *;
+    ldbcvoc:hasInterest IRI *;
+    ldbcvoc:studyAt IRI *;
+    ldbcvoc:likes IRI *;
+    ldbcvoc:knows IRI *;
+}

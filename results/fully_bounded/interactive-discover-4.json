@@ -1,0 +1,27 @@
+{
+  "conditionalLink": [],
+  "starPatternsContainment": {
+    "message": {
+      "result": "CONTAIN",
+      "target": [
+        "http://exemple.ca/comments.shexc"
+      ]
+    },
+    "location": {
+      "result": "DEPEND",
+      "target": [
+        "http://exemple.ca/city.shexc"
+      ]
+    }
+  },
+  "visitShapeBoundedResource": {
+    "http://exemple.ca/city.shexc": true,
+    "http://exemple.ca/comments.shexc": true,
+    "http://exemple.ca/knows.shexc": false,
+    "http://exemple.ca/likes.shexc": false,
+    "http://exemple.ca/noise.shexc": true,
+    "http://exemple.ca/posts.shexc": true,
+    "http://exemple.ca/profile.shexc": true,
+    "http://exemple.ca/setting.shexc": false
+  }
+}

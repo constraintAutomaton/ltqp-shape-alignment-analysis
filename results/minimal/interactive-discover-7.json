@@ -1,0 +1,29 @@
+{
+  "conditionalLink": [],
+  "starPatternsContainment": {
+    "message": {
+      "result": "CONTAIN",
+      "target": [
+        "http://exemple.ca/comments.shexc",
+        "http://exemple.ca/noise.shexc",
+        "http://exemple.ca/posts.shexc"
+      ]
+    },
+    "forum": {
+      "result": "REJECTED"
+    },
+    "moderator": {
+      "result": "CONTAIN",
+      "target": [
+        "http://exemple.ca/profile.shexc"
+      ]
+    }
+  },
+  "visitShapeBoundedResource": {
+    "http://exemple.ca/comments.shexc": true,
+    "http://exemple.ca/noise.shexc": true,
+    "http://exemple.ca/posts.shexc": true,
+    "http://exemple.ca/profile.shexc": true,
+    "http://exemple.ca/setting.shexc": false
+  }
+}

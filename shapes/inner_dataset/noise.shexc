@@ -1,0 +1,9 @@
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX ldbcvoc: <http://localhost:3000/www.ldbc.eu/ldbc_socialnet/1.0/vocabulary/>
+PREFIX schema: <http://www.w3.org/2000/01/rdf-schema#>
+
+<http://exemple.ca/noise.shexc> CLOSED {
+    a ldbcvoc:Noise?;
+    ldbcvoc:hasCreator @<http://exemple.ca/profile.shexc>;
+    ldbcvoc:noise xsd:string;
+}

@@ -1,0 +1,18 @@
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX ldbcvoc: <http://localhost:3000/www.ldbc.eu/ldbc_socialnet/1.0/vocabulary/>
+PREFIX schema: <http://www.w3.org/2000/01/rdf-schema#>
+
+<http://exemple.ca/posts.shexc> CLOSED {
+    a ldbcvoc:Post?;
+    ldbcvoc:id xsd:long;
+    ldbcvoc:imageFile xsd:string * ;
+    ldbcvoc:language xsd:string *;
+    ldbcvoc:locationIP xsd:string;
+    ldbcvoc:browserUsed xsd:string;
+    ldbcvoc:creationDate xsd:dateTime;
+    ldbcvoc:hasCreator IRI;
+    ldbcvoc:hasTag IRI *;
+    ldbcvoc:content xsd:string?;
+    schema:seeAlso IRI *;
+    ldbcvoc:isLocatedIn IRI ?;
+}

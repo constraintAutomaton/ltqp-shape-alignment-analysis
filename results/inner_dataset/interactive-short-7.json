@@ -1,0 +1,37 @@
+{
+  "conditionalLink": [],
+  "starPatternsContainment": {
+    "message": {
+      "result": "DEPEND",
+      "target": [
+        "http://exemple.ca/posts.shexc",
+        "http://exemple.ca/comments.shexc"
+      ]
+    },
+    "messageCreator": {
+      "result": "DEPEND",
+      "target": [
+        "http://exemple.ca/profile.shexc"
+      ]
+    },
+    "comment": {
+      "result": "CONTAIN",
+      "target": [
+        "http://exemple.ca/comments.shexc"
+      ]
+    },
+    "replyAuthor": {
+      "result": "DEPEND",
+      "target": [
+        "http://exemple.ca/profile.shexc"
+      ]
+    }
+  },
+  "visitShapeBoundedResource": {
+    "http://exemple.ca/comments.shexc": true,
+    "http://exemple.ca/noise.shexc": true,
+    "http://exemple.ca/posts.shexc": true,
+    "http://exemple.ca/profile.shexc": true,
+    "http://exemple.ca/setting.shexc": false
+  }
+}

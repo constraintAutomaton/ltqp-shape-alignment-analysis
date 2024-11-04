@@ -1,0 +1,33 @@
+{
+  "conditionalLink": [],
+  "starPatternsContainment": {
+    "rootPerson": {
+      "result": "CONTAIN",
+      "target": [
+        "http://exemple.ca/profile.shexc"
+      ]
+    },
+    "knows": {
+      "result": "DEPEND",
+      "target": [
+        "http://exemple.ca/knows.shexc"
+      ]
+    },
+    "person": {
+      "result": "DEPEND",
+      "target": [
+        "http://exemple.ca/profile.shexc"
+      ]
+    }
+  },
+  "visitShapeBoundedResource": {
+    "http://exemple.ca/city.shexc": true,
+    "http://exemple.ca/comments.shexc": true,
+    "http://exemple.ca/knows.shexc": true,
+    "http://exemple.ca/likes.shexc": true,
+    "http://exemple.ca/noise.shexc": false,
+    "http://exemple.ca/posts.shexc": true,
+    "http://exemple.ca/profile.shexc": true,
+    "http://exemple.ca/setting.shexc": false
+  }
+}
